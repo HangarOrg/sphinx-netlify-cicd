@@ -1,7 +1,7 @@
 Deploying Sphinx to Netlify
 ===========================
 
-Writing documentation in `Sphinx <sphinx-doc.org/>`_ is awesome! And automatic deployments to `Netlify <https://www.netlify.com/>`_ is awesome. Wouldn't it be super awesome if you easily could do both! Fortunately, you can! Just follow the instructions below. Or, if you just want to get going:
+Writing documentation in `Sphinx <https://sphinx-doc.org/>`_ is awesome! And automatic deployments to `Netlify <https://www.netlify.com/>`_ is awesome. Wouldn't it be super awesome if you easily could do both! Fortunately, you can! Just follow the instructions below. Or, if you just want to get going:
 
 .. code:: bash
 
