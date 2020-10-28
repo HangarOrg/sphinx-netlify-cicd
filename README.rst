@@ -6,6 +6,7 @@ Writing documentation in `Sphinx <sphinx-doc.org/>`_ is awesome! And automatic d
 .. code:: bash
 
     curl https://raw.githubusercontent.com/HangarOrg/sphinx-netlify-cicd/main/start.sh -o start.sh
+    chmod +x start.sh
     ./start.sh
 
 Enjoy!
@@ -26,7 +27,7 @@ The steps
 .. code:: bash
 
     git init
-    gh repo create <organization_name>/<repository_name>        # This creates the github repo, and links the folder to the repo
+    gh repo create organization_name/repository_name        # This creates the github repo, and links the folder to the repo
     echo "_build" > .gitignore                              # This creates a .gitignore file that ignores the `_build` directory
 
 - **Install Sphinx**. First, you're going to need to have a way to install ``sphinx`` both locally and in Netlify. Because sphinx is a python library, you need to install sphinx and its dependencies. This actually involves two steps, (1) declaring that you're going to use the Python runtime using a ``runtime.txt`` file in the root directory, and (2) identifying the dependencies that need to be installed using a ``requirements.txt`` file in the root directory. Heres' how:
@@ -56,7 +57,7 @@ The steps
     ## If you are using the virtual environment and not poetry, run
     # sphinx-quickstart
 
-- **Set up netlify**. The easiest thing to do here is to set up ``netlify`` using the netlify CLI. And that's as simple as running ``netlify init``. But, the catch is that you want to make sure that you specify the right defaults for your published directory and build commands. So, either make sure to specify the correct defaults (build command ``make html``, and directory to deploy (``_build/html``) or create a ``netlify.toml`` file in your root directory, like so:
+- **Set up netlify**. The easiest thing to do here is to set up ``netlify`` using the netlify CLI. And that's as simple as running ``netlify init``. When you do it, you'll want to specify that you want to ``connect this directory with GitHub first``.But, the catch is that you want to make sure that you specify the right defaults for your published directory and build commands. So, either make sure to specify the correct defaults (build command ``make html``, and directory to deploy (``_build/html``) or create a ``netlify.toml`` file in your root directory, like so:
 
 .. code:: bash
 
